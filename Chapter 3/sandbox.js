@@ -87,3 +87,16 @@ switch(grade){
     default:
         console.log('not a valid grade');
 }
+
+let newage = 30;
+
+if(true){
+    let newage = 40;
+    let name = 'shaun';
+    console.log('inside 1st code block: ', newage, name);
+    if (true){
+        let newage = 50;
+        console.log('inside 2nd code block: ', newage);
+    }
+}
+console.log('outside code block: ', newage, name);
