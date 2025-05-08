@@ -13,10 +13,17 @@
 //     console.log('hello there');
 // }
 
-const speak = function(name = 'luigi', time = 'night'){
-    console.log(`good ${time} ${name}`);
+// const speak = function(name = 'luigi', time = 'night'){
+//     console.log(`good ${time} ${name}`);
+// };
+// speak();
+// speak('shaun');
+// speak('mario', 'morning');
+
+const calcArea = function(radius){
+    return 3.14 * radius ** 2;
 };
-speak();
-speak('shaun');
-speak('mario', 'morning');
+
+const area = calcArea(5);
+console.log(area);
 
