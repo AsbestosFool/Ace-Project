@@ -78,3 +78,22 @@ let html = `
     </div>
 `;
 console.log(html);
+
+
+let ninjas = ['shaun', 'ryu', 'chun-li'];
+//ninjas[1] = 'ken';
+//console.log(ninjas[1]);
+
+let ages = [20, 25, 30, 35];
+console.log(ages[2]);
+
+//let random = ['shaun', 'crystal', 30, 20];
+//console.log(random);
+
+//console.log(ninjas.length);
+//let resultNinja = ninjas.join('-');
+//let resultNinja = ninjas.indexOf('chun-li');
+//let resultNinja = ninjas.concat(['ken', 'crystal']);
+let resultNinja = ninjas.push('ken');
+resultNinja = ninjas.pop();
+console.log(ninjas);
