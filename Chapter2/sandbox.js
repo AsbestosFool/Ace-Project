@@ -127,3 +127,14 @@ console.log(num === 23);
 console.log(num === '23');
 console.log(num !== 23);
 console.log(num !== '23');
+
+let score = '100';
+// score = Number(score);
+// console.log(score + 1);
+// console.log(typeof score);
+
+//let convResult = Number('hello');
+// let convResult = String(50);
+// let convResult = Boolean(0);
+let convResult = Boolean('');
+console.log(convResult, typeof convResult);
