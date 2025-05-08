@@ -44,3 +44,23 @@ console.log(index);
 let emailResult = email.replace('e', 'd');
 console.log(emailResult);
 
+let radius = 10;
+const pi = 3.14;
+
+//console.log(10/2);
+//let numberResult = radius % 3;
+//let numberResult = pi * radius**2;
+let numberResult = 5 * (10-3)**2;
+console.log(numberResult);
+
+let likes = 10; 
+//likes = likes + 1;
+//likes--;
+//likes += 10;
+//likes *= 2;
+//likes /= 2;
+//console.log(likes);
+//console.log(5*'hello');
+
+let likesResult = 'the blog has '+ likes + ' likes';
+console.log(likesResult);
