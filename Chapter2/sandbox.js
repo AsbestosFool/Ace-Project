@@ -35,3 +35,12 @@ console.log(result, fullname);
 
 let index = email.indexOf('@');
 console.log(index);
+
+//methods for strings
+//let emailResult = email.lastIndexOf('l')
+
+//let emailResult = email.slice(5,7);
+//let emailResult = email.substr(5,7);
+let emailResult = email.replace('e', 'd');
+console.log(emailResult);
+
