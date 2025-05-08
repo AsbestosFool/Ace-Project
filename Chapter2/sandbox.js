@@ -97,3 +97,33 @@ console.log(ages[2]);
 let resultNinja = ninjas.push('ken');
 resultNinja = ninjas.pop();
 console.log(ninjas);
+
+let age2 = null;
+console.log(age2, age2 + 3);
+
+let emailBool = email.includes('@');
+console.log(emailBool); 
+
+let names = ['mario', 'luigi', 'toad'];
+let resultName = names.includes('luigi');
+console.log(resultName);
+
+let num = 23
+console.log(num == 23);   
+console.log(num == 50);
+console.log(num != 50);
+console.log(num > 50);
+console.log(num < 50);
+console.log(num >= 25);
+console.log(num <= 25);
+
+let stringName = 'shaun' 
+console.log(stringName == 'shaun');
+console.log(stringName == 'Shaun');
+console.log(stringName > 'crystal');
+console.log(stringName > 'Shaun');
+
+console.log(num === 23);
+console.log(num === '23');
+console.log(num !== 23);
+console.log(num !== '23');
