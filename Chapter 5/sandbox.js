@@ -7,4 +7,12 @@ let user = {
 };
 
 console.log(user);
-console.log('hi');
+console.log(user.name);
+
+user.age = 35;
+console.log(user.age);
+console.log(user['email']);
+user['name' ] = 'chun-li';
+console.log(user['name']);
+
+console.log(typeof user);
