@@ -29,3 +29,25 @@ do{
     i++;
 } while(i < 5);
 
+const age = 25;
+if(age > 20){
+    console.log('you are over 20');
+}
+
+const ninjas = ['shaun', 'ryu', 'chun-li', 'yoshi'];
+if(ninjas.length > 3){
+    console.log("that's is a lot of ninjas");
+}
+
+const password = 'p@ss12';
+
+if(password.length >= 8 && password.includes('@'))
+{
+    console.log('that password is strong');
+} 
+else if(password.length >= 6 || password.includes('@') && password.length >= 5){
+    console.log('that password is medium strong');
+}
+else {
+    console.log('that password is not strong enough');
+}
