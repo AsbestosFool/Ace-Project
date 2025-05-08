@@ -52,8 +52,7 @@ const pi = 3.14;
 //let numberResult = pi * radius**2;
 let numberResult = 5 * (10-3)**2;
 console.log(numberResult);
-
-let likes = 10; 
+ 
 //likes = likes + 1;
 //likes--;
 //likes += 10;
@@ -62,5 +61,20 @@ let likes = 10;
 //console.log(likes);
 //console.log(5*'hello');
 
-let likesResult = 'the blog has '+ likes + ' likes';
-console.log(likesResult);
+//let likesResult = 'the blog has '+ likes + ' likes';
+//console.log(likesResult);
+
+const title = 'best reads of 2019';
+const author = 'mario';
+const likes = 30;
+const blog = `the blog called ${title} by ${author} has ${likes} likes`;
+console.log(blog);
+
+let html = `
+    <div>
+        <h2>${title}</h2>
+        <p>by ${author}</p>
+        <span>This blog has ${likes} likes</span>
+    </div>
+`;
+console.log(html);
