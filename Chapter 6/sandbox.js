@@ -45,8 +45,28 @@
 // mssg.setAttribute('class', 'success');
 // mssg.setAttribute('style', 'color: green');
 
-const title = document.querySelector('h1');
-title.style.margin = '50px';
-title.style.color = 'crimson';
-title.style.fontSize = '60px';
-title.margin = '';
+// const title = document.querySelector('h1');
+// title.style.margin = '50px';
+// title.style.color = 'crimson';
+// title.style.fontSize = '60px';
+// title.margin = '';
+
+// const content = document.querySelector('p');
+// content.classList.add('error');
+// content.classList.remove('error');
+// content.classList.add('success');
+
+const paras = document.querySelectorAll('p');
+
+paras.forEach(para => {
+    if(para.textContent.includes('error')) {
+        para.classList.add('error');
+    }
+    else if(para.textContent.includes('success')) {
+        para.classList.add('success');
+    }
+});
+
+const title = document.querySelector('.title');
+title.classList.toggle('test');
+title.classList.toggle('test');
