@@ -34,13 +34,19 @@
 //     content.innerHTML += `<p>${person}</p>`;
 // });
 
-const link = document.querySelector('a');
+// const link = document.querySelector('a');
 
-console.log(link.getAttribute('href'));
-link.setAttribute('href', 'https://youtube.com');
-link.innerText = 'youtube';
+// console.log(link.getAttribute('href'));
+// link.setAttribute('href', 'https://youtube.com');
+// link.innerText = 'youtube';
 
-const mssg = document.querySelector('p');
-console.log(mssg.getAttribute('class'));
-mssg.setAttribute('class', 'success');
-mssg.setAttribute('style', 'color: green');
+// const mssg = document.querySelector('p');
+// console.log(mssg.getAttribute('class'));
+// mssg.setAttribute('class', 'success');
+// mssg.setAttribute('style', 'color: green');
+
+const title = document.querySelector('h1');
+title.style.margin = '50px';
+title.style.color = 'crimson';
+title.style.fontSize = '60px';
+title.margin = '';
