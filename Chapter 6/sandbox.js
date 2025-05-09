@@ -15,21 +15,32 @@
 // const paras = document.getElementsByTagName('p');
 // console.log(paras);
 
-const para = document.querySelector('p');
-// para.innerText = 'ninjas are awesome';
+// const para = document.querySelector('p');
+// // para.innerText = 'ninjas are awesome';
 
-const paras = document.querySelectorAll('p');
-// paras.forEach(para => {
-//     console.log(para.innerText);
-//     para.innerText += ' new text';
+// const paras = document.querySelectorAll('p');
+// // paras.forEach(para => {
+// //     console.log(para.innerText);
+// //     para.innerText += ' new text';
     
+// // });
+
+// const content = document.querySelector('.content');
+// //content.innerHTML += '<h2>hello</h2>';
+
+// const people = ['mario', 'luigi', 'yoshi'];
+
+// people.forEach(person => {
+//     content.innerHTML += `<p>${person}</p>`;
 // });
 
-const content = document.querySelector('.content');
-//content.innerHTML += '<h2>hello</h2>';
+const link = document.querySelector('a');
 
-const people = ['mario', 'luigi', 'yoshi'];
+console.log(link.getAttribute('href'));
+link.setAttribute('href', 'https://youtube.com');
+link.innerText = 'youtube';
 
-people.forEach(person => {
-    content.innerHTML += `<p>${person}</p>`;
-});
+const mssg = document.querySelector('p');
+console.log(mssg.getAttribute('class'));
+mssg.setAttribute('class', 'success');
+mssg.setAttribute('style', 'color: green');
