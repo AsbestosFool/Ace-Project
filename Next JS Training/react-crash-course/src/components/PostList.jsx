@@ -1,32 +1,16 @@
-import { useState } from "react";
 import Post from "./Post";
 import NewPost from "./NewPost";
 import Modal from "./Modal";
 import styles from './PostList.module.css';
 function PostList({isPosting, onStopPosting}) {
-    const [enteredBody, setEnteredBody] = useState('');
-    const [enteredAuthor, setEnteredAuthor] = useState('');
-
-
-    function bodyChangeHandler(event) {
-        setEnteredBody(event.target.value);
-    }  
-    
-    function authorChangeHandler(event) {
-        setEnteredAuthor(event.target.value);
-    }
     return (
     <>
         {isPosting && (
-        <Modal onClose = {onStopPosting}>
-            <NewPost 
-            onBodyChange = {bodyChangeHandler} 
-            onAuthorChange = {authorChangeHandler}
-            onCancel = {onStopPosting}/>
-        </Modal>
+            <Modal onClose = {onStopPosting}>
+                <NewPost onCancel = {onStopPosting}/>
+            </Modal>
         )}
         <ul className={styles.posts}>
-            <Post author ={enteredAuthor} body = {enteredBody} />
             <Post author ="Some other dude" body = "Other world" />
         </ul>
     </>
