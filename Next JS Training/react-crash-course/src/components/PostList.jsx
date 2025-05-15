@@ -5,12 +5,15 @@ import Modal from "./Modal";
 import styles from './PostList.module.css';
 function PostList({isPosting, onStopPosting}) {
     const [posts,setPosts] = useState([]);
+    const [isFetching, setIsFetching] = useState(false);
 
     useEffect(() => {
         async function fecthPosts() {
+            setIsFetching(true);
             const response = await fetch('http://localhost:8080/posts');
             const resData = await response.json();
-            setPosts(resData.posts);               
+            setPosts(resData.posts);  
+            setIsFetching(false);             
         } 
         fecthPosts();
     }, [])
@@ -26,26 +29,31 @@ function PostList({isPosting, onStopPosting}) {
     }
     
     return (
-    <>
-        {isPosting && (
-            <Modal onClose = {onStopPosting}>
-                <NewPost onCancel = {onStopPosting} onAddPost = {addPostHandler}/>
-            </Modal>
-        )}
-        {posts.length > 0 && (
-            <ul className={styles.posts}>
-                {posts.map((post) => (
-                    <Post key = {post.body} author = {post.author} body = {post.body}/>
-                ))}
-            </ul>
-        )}
-        {posts.length === 0 && (
-            <div style={{textAlign: 'center', color: 'white'}}>
-                <h2>No posts found.</h2>
-                <p>Start adding some!</p>
-            </div>
-        )}
-    </>
+        <>
+            {isPosting && (
+                <Modal onClose = {onStopPosting}>
+                    <NewPost onCancel = {onStopPosting} onAddPost = {addPostHandler}/>
+                </Modal>
+            )}
+            {!isFetching && posts.length > 0 && (
+                <ul className={styles.posts}>
+                    {posts.map((post) => (
+                        <Post key = {post.body} author = {post.author} body = {post.body}/>
+                    ))}
+                </ul>
+            )}
+            {!isFetching && posts.length === 0 && (
+                <div style={{textAlign: 'center', color: 'white'}}>
+                    <h2>No posts found.</h2>
+                    <p>Start adding some!</p>
+                </div>
+            )}
+            {isFetching && (
+                <div style={{textAlign: 'center', color: 'white'}}>
+                    <p>Loading Post...</p>
+                </div>
+            )}
+        </>
     );
 }
 
