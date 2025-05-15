@@ -21,7 +21,8 @@ function PostList({isPosting, onStopPosting}) {
         <Modal onClose = {onStopPosting}>
             <NewPost 
             onBodyChange = {bodyChangeHandler} 
-            onAuthorChange = {authorChangeHandler}/>
+            onAuthorChange = {authorChangeHandler}
+            onCancel = {onStopPosting}/>
         </Modal>
         )}
         <ul className={styles.posts}>
