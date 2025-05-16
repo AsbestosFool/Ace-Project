@@ -13,7 +13,7 @@ function MainHeader() {
       <p>
         <Link to='/create-posts' className={classes.button}>
           <MdPostAdd size={18} />
-          New Pst
+          New Post
         </Link>
       </p>
     </header>
